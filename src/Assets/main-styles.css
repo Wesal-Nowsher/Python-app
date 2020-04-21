@@ -1,3 +1,372 @@
-.login-cred-box{
-    width: 35%;
+
+/* menu css start */
+#menu .react-tabs__tab{
+    background: rgb(216,216,216);
+    border-color: #ffffff;
+    color: #ffffff;
+    border-radius: 0;
+    padding: 12px 4px 12px 24px;
+    width: 15%;
+}
+#menu .react-tabs__tab-list {
+    margin: 0 0 0;
+    border-bottom:none;
+}
+#menu .react-tabs__tab--selected {
+    background: rgb(119,159,238);
+}
+#menu{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#menu .nav-display{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#menu div li h1{
+    font-size: 22px;
+    margin-bottom: 0;
+}
+#menu .cards{
+    background-color: rgb(236,236,236);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 24px;
+    height: 100%;
+}
+#menu .tab-row{
+    padding: 0px 14px;
+}
+#menu .padd{
+    padding: 0 2px;
+}
+#menu .padd-1{
+    padding: 3px 0;
+}
+#menu .cards h4{
+    font-size: 16px;
+    font-weight: bold;
+}
+#menu .cards h5{
+    font-size: 16px;
+    font-weight: bold;
+    color:rgb(119,159,238) ;
+}
+#menu .cards .card-inner{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#menu .cards .card-inner .img-div{
+    padding: 40px 50px 20px 50px;
+}
+#menu .cards .img-div img{
+    width: 100%;
+}
+#menu .cards .card-inner button{
+    width: 100%;
+    background: rgb(119,159,238);
+    color: #ffffff;
+    font-size: 11px;
+    outline: none;
+    border: none;
+    padding: 7px 2px;
+}
+#menu .cards .card-inner .two-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding-top: 40px;
+}
+#menu .cards .comingsoon{
+    height: 100%;
+}
+#menu .right-side{
+    height: 100%;
+}
+#menu .right-side .graphs{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* menu css end */
+/* login css start */
+.pop{
+    justify-content: center;
+}
+.pop .card .card-top{
+    padding: 30px 35px;
+}
+.pop .card .card-top.height{
+    height: 260px;
+}
+.pop .card .lab-inp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0 2px 0;
+}
+.pop .card .lab-inp input{
+    width: 68%;
+    border: 2px solid rgba(0,0,0,.125);
+}
+.pop .card .lab-inp select{
+    width: 68%;
+    border: 2px solid rgba(0,0,0,.125);
+    outline: none;
+}
+.pop .card .card-bottom{
+    background: rgb(236,236,236);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px 30px;
+}
+.pop .card  .right{
+    width: 68%;
+}
+.pop .card .right button{
+    background: rgb(119,159,238);
+    color: #ffffff;
+    width: 100%;
+    border: none;
+    outline: none;
+    margin-top: 15px;
+    padding: 6px;
+}
+.terms-con{
+    padding: 40px 30px;
+}
+.terms-con .input{
+    color: rgb(119,159,238);
+    text-align: center;
+    margin-bottom: 10px;
+}
+#login{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+/* login css end */
+.pop .card .createuser{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.pop .card .createuserimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pop .card .createuserimg img{
+    width: 16%;
+}
+/* create user css */
+/* employeeAccess css start */
+#employee{
+    background: rgb(216,216,216);
+    height: 100vh;
+    padding: 30px 0;
+}
+#employee .form-set.width2{
+    width: 23%;
+}
+#employee .form-set{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#employee select{
+    width: 68%;
+    border: 2px solid rgba(0,0,0,.125);
+    outline: none;
+    color: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(0, 0, 0, 0.125);;
+}
+#employee .employeebox{
+    background: rgb(119,159,238);
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    padding: 10px 10px;
+    margin: 25px 35px 30px 0;
+}
+#employee .employeebox h4{
+    font-size: 18px;
+    margin-bottom: 0;
+    text-align: center;
+}
+/* employeeAccess css end */
+/* user activity css start */
+.table-head{
+    background: rgb(236,236,236);
+    padding: 40px 50px;
+}
+.table-head .lab-inp{
+    display: flex;
+    align-items: center;
+}
+.table-head .lab-inp input{
+    margin-left: 14px;
+    width: 62%;
+}
+.table-body{
+    padding: 40px 50px;
+}
+table{
+    width:85%;
+}
+.table-body tr td, table thead th{
+    padding: 20px 0;
+}
+.table-body tr td{
+    color: rgb(141,141, 141);
+}
+
+/* user activity css end */
+/* maintain css */
+.pop .card .maintain{
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+}
+.pop .card .maintain>div{
+    width: 68%;
+}
+.pop .card .maintain>div p{
+    font-size: 16px;
+}
+.pop .card .maintain-button{
+    display: flex;
+    justify-content: flex-end;
+    margin: 24px 0;
+}
+.pop .card .maintain-button>div{
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.pop .card .maintain-button>div button{
+    width: 40%;
+    background: rgb(216,216,216);
+    border: none;
+    outline: none;
+    padding: 4px 0;
+}
+.pop .card .maintain-button>div button:first-child{
+    background: rgb(119,159,238);
+    color: #ffffff;
+}
+.weekly.table-body tr td,.weekly table thead th {
+    padding: 14px 0;
+}
+.beforetab{
+    padding: 6px 50px;
+}
+.beforetab p{
+    margin-bottom: 0;
+    padding: 10px 0;
+}
+.beforetab .background{
+    background:rgb(216,216,216);
+}
+#openweek{
+    padding: 50px;
+}
+#openweek .react-tabs__tab{
+    background: #ffffff;
+    border-color: rgb(216,216,216);
+    border-radius: 0;
+    padding: 16px 26px 16px 26px;
+}
+#openweek .react-tabs__tab-list {
+    margin: 0 0 0;
+    border-bottom: none;
+}
+#openweek .react-tabs__tab--selected {
+    background: rgb(216,216,216);
+}
+#openweek .react-tabs__tab h1{
+    font-size: 16px;
+}
+#openweek .react-tabs__tab-panel--selected {
+    border: 1px solid rgb(216,216,216);
+}
+/* pending review css start */
+.sku-ex{
+    background: rgb(119,159,238);
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    padding: 4px 10px;
+    width: 65%;
+    justify-content: space-between;
+}
+.sku-ex p{
+    margin-bottom: 0;
+}
+.bordertop{
+    border-top: 2px solid rgb(216,216,216);
+}
+.secondtable {
+    border-top: 1px solid rgb(216,216,216);
+}
+.secondtable table{
+    width: 94%;
+}
+.secondtable table th{
+    width: 68px;
+}
+/* build details css start*/
+.builddetails table{
+    width: 100%;
+}
+/* batch print css start*/
+.batch-button{
+    margin-top: 30px;
+}
+.batch-button>div {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 6px 0;
+}
+.batch-button button{
+    background: rgb(216,216,216);
+    border: 1px solid #ffffff;
+    padding: 6px 14px;
+    width: 28%;
+}
+.batch-button button:first-child{
+    background: rgb(119,238,119);
+    color: #ffffff;
+}
+.batch-button button:nth-child(2){
+    background: rgb(119,159,238);
+    color: #ffffff;
+}
+.pop .card .lab-inp p{
+    margin-bottom: 0;
+}
+.pop .card .batch input{
+    width: unset;
+}
+
+
+
+/* sidebar css */
+.sidebarr{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: rgb(216,216,216);
+}
+.sidebarr a{
+    padding: 6px;
 }
