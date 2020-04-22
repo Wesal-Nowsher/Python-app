@@ -17,13 +17,20 @@ import BuildDetailsView from "./components/buildDetailsView";
 import BatchPrint from "./components/batchPrint";
 import IndividualPrint from "./components/individualPrint";
 import EmailPrint from "./components/emailPrint";
-import SideBar from "./components/sidebar";
+import ReviewForm from "./components/reviewForm";
+import TimeRegistration from "./components/timeRegistration";
+import ManagePatch from "./components/managePatch";
+import RecentApplication from "./components/recentApplication";
+import ExcelFile from "./components/excelFile";
+import TimeRegistrationForm from "./components/timeRegistrationForm";
+import TimeRegistrationFormTwo from "./components/timeRegistrationFormTwo";
+import BuildDetailsForm from "./components/buildDetailsForm";
+
 class Routes extends Component {
     render(){
         return(
-        <Switch>
-        <Route exact path="/" component={SideBar}  />    
-        <Route exact path="/menu" component={Menu}  />
+        <Switch>  
+        <Route exact path="/" component={Menu}  />
         <Route path="/login" component={Login}  />
         <Route path="/selectdatabase" component={SelectDatabase}  />
         <Route path="/createuser" component={CreateUser}  />
@@ -40,6 +47,14 @@ class Routes extends Component {
         <Route path="/batchprint" component={BatchPrint}  />
         <Route path="/individualprint" component={IndividualPrint}  />
         <Route path="/emailprint" component={EmailPrint}  />
+        <Route path="/reviewform" component={ReviewForm}  />
+        <Route path="/timeregistration" component={TimeRegistration}  />
+        <Route path="/managepatch" component={ManagePatch}  />
+        <Route path="/recentapplication" component={RecentApplication}  />
+        <Route path="/excelfile" component={ExcelFile}  />
+        <Route path="/timeregistrationform" component={TimeRegistrationForm}  />
+        <Route path="/timeregistrationformtwo" component={TimeRegistrationFormTwo}  />
+        <Route path="/builddetailsform" component={BuildDetailsForm}  />
         </Switch>
         )
     }

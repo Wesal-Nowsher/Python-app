@@ -215,7 +215,7 @@
 }
 .table-head .lab-inp input{
     margin-left: 14px;
-    width: 62%;
+    width: 60%;
 }
 .table-body{
     padding: 40px 50px;
@@ -358,15 +358,232 @@ table{
     width: unset;
 }
 
-
-
-/* sidebar css */
-.sidebarr{
-    position: absolute;
-    top: 0;
+/* reviewed view css start */
+.backgroundcol{
+    background: rgb(236,236,236);
+    padding: 25px 50px;
+}
+.backgroundcol .first{
+    display: flex;
+    align-items: center;
+}
+.backgroundcol .first p{
+    margin-bottom: 0;
+    font-weight: 500;
+}
+.backgroundcol .first button{
+    background: rgb(119,159,238);
+    border: none;
+    padding: 4px 24px;
+    color: white;
+    margin-left: 60px;
+}
+.backgroundcol .second .col-sm-3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.backgroundcol .second{
+    margin: 50px 0 15px;
+}
+.backgroundcol .third{
+    margin: 20px 0;
+}
+.backgroundcol .third .col-sm-3,.backgroundcol .third .col-sm-6{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.backgroundcol .third .col-sm-6 .unit{
+    width: 15%;
+}
+.table-body.review{
+    padding: 0;
+}
+.table-body.review table{
     width: 100%;
+}
+
+/* reviewed view css end */
+/* time registration start */
+#registration table{
+    border: 2px solid rgb(236,236,236);
+}
+#registration table thead{
+    background: rgb(236,236,236);
+}
+#registration .table-body tr td,#registration table thead th {
+    padding: 20px 30px;
+}
+#registration table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+/* time registration end */
+/* manage patch start */
+.manage{
+    justify-content: flex-end!important;
+}
+/* manage patch end */
+.card-top table tr td{
+    padding: 6px 0;
+}
+.card-bottom-1{
+    background: rgb(236,236,236);
+    text-align: center;
+    padding:10px 0;
+}
+
+/* excel file start */
+.excelfile table{
+    width: 100%;
+}
+.excelfile table tr td{
+    padding: 6px;
+}
+.excelfile .border-bot{
+    border-bottom: 1px solid rgb(236,236,236);
+}
+.excelfile tr td input, .excelfile tr td select{
+    color: rgb(141,141, 141);
+}
+
+/* time registration form start */
+.right-button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.right-button button{
+    background: rgb(119,159,238);
+    border: none;
+    color: #ffffff;
+    padding: 6px 0;
+    margin: 5px 8px;
+    width: 160px;
+}
+.left-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 92px;
+}
+.left-content .esd{
+    font-size: 22px;
+}
+.lab-inp input{
+    border: 1px solid rgb(216,216,216);
+}
+.bordertop .lab-inp select{
+    margin-left: 14px;
+    width: 60%;
+    border: 1px solid rgb(216,216,216);
+}
+/* Activity css start */
+.activitytab{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 16px;
+}
+.activitytab table{
+    height: 190px;
+}
+.activitytab td, .activitytab th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.activitytab th{
     background: rgb(216,216,216);
 }
-.sidebarr a{
-    padding: 6px;
+.activitytab tr:nth-child(odd){
+      background-color: #f2f2f2;
+}
+.activitytab select{
+    width: 130px;
+    margin-right: 30px;
+}
+.paddtab{
+    padding: 40px 50px;
+}
+.comment-div{
+    border: 1px solid rgb(216,216,216);
+    padding: 20px;
+    height: 210px;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin: 25px 0;
+}
+.comment-div table{
+    width: 100%;
+}
+.comment-div table tr td{
+    font-size: 14px;
+    padding: 10px 0;
+}
+.comment-div table tr th{
+    font-size: 14px;
+}
+.comment-div table tr th:first-child{
+    width: 20%;
+}
+.comment-div::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  .comment-div::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  .comment-div::-webkit-scrollbar-thumb {
+    background: rgb(216,216,216); 
+  }
+  
+  /* Handle on hover */
+  .comment-div::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+.backgroundcol .third .col-sm-9{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.backgroundcol .third .col-sm-9 .unit{
+    width: 15%;
+}
+.backgroundcol .third-inn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.backgroundcol .third-inn>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.backgroundcol .third-inn>div p{
+    margin: 0 14px;
+}
+
+.prepTables{
+    margin: 20px 0;
+}
+
+.prepTables td, .prepTables th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.prepTables th{
+    background: rgb(216,216,216);
+    text-align: center;
+    font-weight: 500;
+}
+.prepTables tr:nth-child(odd){
+      background-color: #f2f2f2;
+}
+.prepTables tr td:first-child{
+    background-color: rgb(216,216,216);
+    text-align: center;
 }
