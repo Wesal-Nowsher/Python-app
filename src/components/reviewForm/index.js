@@ -30,7 +30,10 @@ class ReviewForm extends Component {
 
                                     <div className="col-sm-3">
                                         <label className="mb-0">Date From</label>
-                                        <input type="date" />
+                                        <div className="position-relative-search">
+                                            <input type="date" className=" w-auto" />
+                                            <i className="fa fa-calendar" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -51,7 +54,7 @@ class ReviewForm extends Component {
                                         <input type="checkbox" />
 
                                         <label className="mb-0">Review By</label>
-                                        <input type="date" />
+                                        <input type="text" />
 
                                         <input type="text" />
                                     </div>
@@ -123,6 +126,7 @@ class ReviewForm extends Component {
                                 <label className="mb-0">Comment List</label>
                                 <div className="comment-div">
                                     <table>
+                                        <tbody>
                                         <tr>
                                             <th>Current ID</th>
                                             <th>Description</th>
@@ -143,6 +147,7 @@ class ReviewForm extends Component {
                                             <td>999999</td>
                                             <td>orum ipsum dolor sit amit, consectetuer adipiscing elit. Aenean commado ligula eget dolor.</td>
                                         </tr>
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>

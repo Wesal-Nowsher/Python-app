@@ -1,23 +1,26 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 class SelectData extends Component {
-    render(){
-        return(
+    render() {
+        return (
             <div className="container" id="login">
                 <div className="row pop">
                     <div className="col-sm-6">
                         <div className="card">
                             <div className="card-top height">
                                 <div className="text-center">
-                                    <img src={require('../../Assets/images/login.png')} alt=""/>
+                                    <img src={require('../../Assets/images/login.png')} alt="" />
                                 </div>
                                 <div className="lab-inp">
                                     <label className="mb-0">Select</label>
-                                    <select>
-                                        <option>Production</option>
-                                        <option>Test1</option>
-                                        <option>Test2</option>
-                                    </select>
+                                    <div className="position-relative ">
+                                        <select>
+                                            <option>Production</option>
+                                            <option>Test1</option>
+                                            <option>Test2</option>
+                                        </select>
+                                        <img src={require('../../Assets/images/down-chevron.svg')} alt="" />
+                                    </div>
                                 </div>
                             </div>
                             <div className="card-bottom">

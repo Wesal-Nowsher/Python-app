@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class CreateUser extends Component {
     // constructor(props) {
     //     super(props);
-    
+
     //     this.toggle = this.toggle.bind(this);
     //     this.state = {
     //       dropdownOpen: new Array(6).fill(false),
@@ -18,7 +18,7 @@ class CreateUser extends Component {
     //       dropdownOpen: newArray,
     //     });
     //   }
-    
+
     render() {
         return (
             <div className="container" id="login">
@@ -47,11 +47,15 @@ class CreateUser extends Component {
                                 </div>
                                 <div className="lab-inp">
                                     <label className="mb-0">Select</label>
-                                    <select>
-                                        <option>0 - User</option>
-                                        <option>1 - Admin</option>
-                                        <option>2 - SuperAdmin</option>
-                                    </select>
+                                    <div className="position-relative ">
+                                        <select>
+                                            <option>0 - User</option>
+                                            <option>1 - Admin</option>
+                                            <option>2 - SuperAdmin</option>
+                                        </select>
+                                        <img src={require('../../Assets/images/down-chevron.svg')} alt="" />
+                                    </div>
+
                                     {/* <Dropdown isOpen={this.state.dropdownOpen[0]} toggle={() => {
                                         this.toggle(0);
                                     }}>
