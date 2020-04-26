@@ -86,6 +86,24 @@ const options = {
 }
 
 class Menu extends Component {
+    state={
+        tabheaddata:[{name:"wesal header",id:"1"},{name:"esal header",id:"2"},{name:"sal header",id:"3"}],
+        tabbodydata:[{name:"wesal body",id:"1"},{name:"esal body",id:"2"},{name:"sal body",id:"3"}],
+
+    };
+    clossTab=(index)=>{
+        console.log("warka dang");
+        let {tabheaddata}=this.state;
+        let tabhead= tabheaddata;
+        tabhead.splice(index, 1);
+        this.setState({tabheaddata:tabhead});
+
+        let {tabbodydata}=this.state;
+        let tabbody= tabbodydata;
+        tabbody.splice(index, 1);
+        this.setState({tabbodydata:tabbody});
+
+    };
     render() {
         return (
             <div className="container" id="menu">
@@ -93,22 +111,41 @@ class Menu extends Component {
                     <div className="col-sm-12">
                         <Tabs defaultIndex={0}>
                             <TabList>
-                                <Tab><div className="nav-display"><h1>Builds</h1><i className="fa fa-times" /></div></Tab>
-                                <Tab><div className="nav-display"><h1>Reviews</h1><i className="fa fa-times" /></div></Tab>
-                                <Tab><div className="nav-display"><h1>Time Sheets</h1><i className="fa fa-times" /></div></Tab>
+                                {
+                                    this.state.tabheaddata && this.state.tabheaddata.map((item, index)=>{
+                                        return(
+                                            <Tab key={index}><div className="nav-display"><h1>{item.name}</h1><i className="fa fa-times" onClick={()=>{this.clossTab(item.name)}} /></div></Tab>
+                                        )
+                                })
+                                }
+
+                                {/*<Tab><div className="nav-display"><h1>Reviews</h1><i className="fa fa-times" /></div></Tab>*/}
+                                {/*<Tab><div className="nav-display"><h1>Time Sheets</h1><i className="fa fa-times" /></div></Tab>*/}
                             </TabList>
-                            <TabPanel>
-                            <MenuComponent/>   
-                            </TabPanel>
+                            {
+
+                            }
+                            {/*<TabPanel>*/}
+                            {/*<MenuComponent/>   */}
+                            {/*</TabPanel>*/}
+                            {
+                                this.state.tabbodydata && this.state.tabbodydata.map((item, index)=> {
+                                    return (
+                                        <TabPanel key={index}>
+                                            {item.name}
+                                        </TabPanel>
+                                    )
+                                }
+                                )
+                            }
 
 
-
-                            <TabPanel>
-                                Menu 2
-                            </TabPanel>
-                            <TabPanel>
-                                Menu 3
-                            </TabPanel>
+                            {/*<TabPanel>*/}
+                                {/*Menu 2*/}
+                            {/*</TabPanel>*/}
+                            {/*<TabPanel>*/}
+                                {/*Menu 3*/}
+                            {/*</TabPanel>*/}
                         </Tabs>
                     </div>
                 </div>

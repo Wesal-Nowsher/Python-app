@@ -25,12 +25,13 @@ import ExcelFile from "./components/excelFile";
 import TimeRegistrationForm from "./components/timeRegistrationForm";
 import TimeRegistrationFormTwo from "./components/timeRegistrationFormTwo";
 import BuildDetailsForm from "./components/buildDetailsForm";
+import Layout from "./components/layout";
 
 class Routes extends Component {
     render(){
         return(
         <Switch>  
-        <Route exact path="/" component={Menu}  />
+        <Route exact path="/" component={Layout}  />
         <Route path="/login" component={Login}  />
         <Route path="/selectdatabase" component={SelectDatabase}  />
         <Route path="/createuser" component={CreateUser}  />
