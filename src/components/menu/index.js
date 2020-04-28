@@ -106,9 +106,8 @@ class Menu extends Component {
     };
     render() {
         return (
-            <div className="container" id="menu">
-                <div className="row">
-                    <div className="col-sm-12">
+            
+                    <div className="col-sm-10" id="menu">
                         <Tabs defaultIndex={0}>
                             <TabList>
                                 {
@@ -148,8 +147,7 @@ class Menu extends Component {
                             {/*</TabPanel>*/}
                         </Tabs>
                     </div>
-                </div>
-            </div>
+         
         )
     }
 }
