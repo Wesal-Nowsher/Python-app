@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { connect } from "react-redux";
 
 class RecentApplication extends Component {
     render(){
@@ -44,4 +45,19 @@ class RecentApplication extends Component {
         )
     }
 }
-export default RecentApplication;
+const mapStateToProps = ({RecentApplication }) => {
+    return {
+
+        batch:RecentApplication.batch
+    };
+};
+
+const mapDispachToProps = dispatch => {
+    return {
+        dispatch: dispatch
+    };
+};
+export default connect(
+    mapStateToProps,
+    {}
+)(RecentApplication);

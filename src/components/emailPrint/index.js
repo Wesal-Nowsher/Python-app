@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { connect } from "react-redux";
+
 
 class EmailPrint extends Component {
     render(){
@@ -30,4 +32,19 @@ class EmailPrint extends Component {
         )
     }
 }
-export default EmailPrint;
+const mapStateToProps = ({EmailPrint }) => {
+    return {
+
+        batch:EmailPrint.batch
+    };
+};
+
+const mapDispachToProps = dispatch => {
+    return {
+        dispatch: dispatch
+    };
+};
+export default connect(
+    mapStateToProps,
+    {}
+)(EmailPrint);

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import { connect } from "react-redux";
+
 
 class BuildDetailsView extends Component {
     render() {
@@ -196,4 +198,19 @@ class BuildDetailsView extends Component {
         )
     }
 }
-export default BuildDetailsView;
+const mapStateToProps = ({BuildDetailsView }) => {
+    return {
+
+        batch:BuildDetailsView.batch
+    };
+};
+
+const mapDispachToProps = dispatch => {
+    return {
+        dispatch: dispatch
+    };
+};
+export default connect(
+    mapStateToProps,
+    {}
+)(BuildDetailsView);

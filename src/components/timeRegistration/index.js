@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import TimeRegistrationForm from '../timeRegistrationForm';
+import { connect } from "react-redux";
 
 class TimeRegistration extends Component {
     render(){
@@ -44,4 +46,19 @@ class TimeRegistration extends Component {
         )
     }
 }
-export default TimeRegistration;
+const mapStateToProps = ({TimeRegistration }) => {
+    return {
+
+        batch:TimeRegistration.batch
+    };
+};
+
+const mapDispachToProps = dispatch => {
+    return {
+        dispatch: dispatch
+    };
+};
+export default connect(
+    mapStateToProps,
+    {}
+)(TimeRegistration);

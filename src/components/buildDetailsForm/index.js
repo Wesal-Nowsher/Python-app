@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from "react-redux";
 
 class BuildDetailsForm extends Component {
     render() {
@@ -248,4 +249,19 @@ class BuildDetailsForm extends Component {
         )
     }
 }
-export default BuildDetailsForm;
+const mapStateToProps = ({BuildDetailsForm }) => {
+    return {
+
+        batch:BuildDetailsForm.batch
+    };
+};
+
+const mapDispachToProps = dispatch => {
+    return {
+        dispatch: dispatch
+    };
+};
+export default connect(
+    mapStateToProps,
+    {}
+)(BuildDetailsForm);

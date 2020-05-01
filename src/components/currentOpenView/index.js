@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { connect } from "react-redux";
+
 
 class CurrentOpenView extends Component {
     render(){
@@ -61,4 +63,19 @@ class CurrentOpenView extends Component {
         )
     }
 }
-export default CurrentOpenView;
+const mapStateToProps = ({CurrentOpenView }) => {
+    return {
+
+        batch:CurrentOpenView.batch
+    };
+};
+
+const mapDispachToProps = dispatch => {
+    return {
+        dispatch: dispatch
+    };
+};
+export default connect(
+    mapStateToProps,
+    {}
+)(CurrentOpenView);

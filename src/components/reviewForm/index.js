@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from "react-redux";
 
 class ReviewForm extends Component {
     render() {
@@ -158,4 +159,19 @@ class ReviewForm extends Component {
         )
     }
 }
-export default ReviewForm;
+const mapStateToProps = ({ReviewForm }) => {
+    return {
+
+        batch:ReviewForm.batch
+    };
+};
+
+const mapDispachToProps = dispatch => {
+    return {
+        dispatch: dispatch
+    };
+};
+export default connect(
+    mapStateToProps,
+    {}
+)(ReviewForm);

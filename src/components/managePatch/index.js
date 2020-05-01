@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { connect } from "react-redux";
 
 class ManagePatch extends Component {
     render(){
@@ -40,4 +41,19 @@ class ManagePatch extends Component {
         )
     }
 }
-export default ManagePatch;
+const mapStateToProps = ({ManagePatch }) => {
+    return {
+
+        batch:ManagePatch.batch
+    };
+};
+
+const mapDispachToProps = dispatch => {
+    return {
+        dispatch: dispatch
+    };
+};
+export default connect(
+    mapStateToProps,
+    {}
+)(ManagePatch);

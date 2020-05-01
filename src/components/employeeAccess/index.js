@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from "react-redux";
+
 
 class EmployeeAccess extends Component {
     render() {
@@ -136,4 +138,19 @@ class EmployeeAccess extends Component {
         )
     }
 }
-export default EmployeeAccess;
+const mapStateToProps = ({EmployeeAccess }) => {
+    return {
+
+        batch:EmployeeAccess.batch
+    };
+};
+
+const mapDispachToProps = dispatch => {
+    return {
+        dispatch: dispatch
+    };
+};
+export default connect(
+    mapStateToProps,
+    {}
+)(EmployeeAccess);

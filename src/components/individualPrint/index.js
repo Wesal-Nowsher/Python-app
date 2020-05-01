@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { connect } from "react-redux";
+
 
 class IndividualPrint extends Component {
     render(){
@@ -26,4 +28,19 @@ class IndividualPrint extends Component {
         )
     }
 }
-export default IndividualPrint;
+const mapStateToProps = ({IndividualPrint }) => {
+    return {
+
+        batch:IndividualPrint.batch
+    };
+};
+
+const mapDispachToProps = dispatch => {
+    return {
+        dispatch: dispatch
+    };
+};
+export default connect(
+    mapStateToProps,
+    {}
+)(IndividualPrint);

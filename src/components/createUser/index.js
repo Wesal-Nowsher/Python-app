@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from "react-redux";
+
 // import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle} from 'reactstrap';
 
 class CreateUser extends Component {
@@ -82,4 +84,19 @@ class CreateUser extends Component {
         )
     }
 }
-export default CreateUser;
+const mapStateToProps = ({CreateUser }) => {
+    return {
+
+        batch:CreateUser.batch
+    };
+};
+
+const mapDispachToProps = dispatch => {
+    return {
+        dispatch: dispatch
+    };
+};
+export default connect(
+    mapStateToProps,
+    {}
+)(CreateUser);

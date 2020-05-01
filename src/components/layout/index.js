@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from "react-redux";
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
 import SideBar from "../sideBar";
@@ -27,9 +28,8 @@ class Layout extends Component {
                             </button>
                             {/* <button onClick={()=>{this.open1()}}>File </button> */}
                             <DropdownButton id="dropdown-item-button" title="File">
-                                <Dropdown.Item as="button">Action</Dropdown.Item>
-                                <Dropdown.Item as="button">Another action</Dropdown.Item>
-                                <Dropdown.Item as="button">Something else</Dropdown.Item>
+                                <Dropdown.Item as="button">Sign in</Dropdown.Item>
+                                <Dropdown.Item as="button">Log out</Dropdown.Item>
                             </DropdownButton>
                             <DropdownButton id="dropdown-item-button" title="Edit">
                                 <Dropdown.Item as="button">Action</Dropdown.Item>
@@ -50,4 +50,19 @@ class Layout extends Component {
         )
     }
 }
-export default Layout;
+const mapStateToProps = ({BatchPrint }) => {
+    return {
+
+        batch:BatchPrint.batch
+    };
+};
+
+const mapDispachToProps = dispatch => {
+    return {
+        dispatch: dispatch
+    };
+};
+export default connect(
+    mapStateToProps,
+    {}
+)(Layout);

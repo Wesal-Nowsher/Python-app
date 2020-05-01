@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { connect } from "react-redux";
 
 class Login extends Component {
     render(){
@@ -54,4 +55,19 @@ class Login extends Component {
         )
     }
 }
-export default Login;
+const mapStateToProps = ({login }) => {
+    return {
+
+        login:login.login
+    };
+};
+
+const mapDispachToProps = dispatch => {
+    return {
+        dispatch: dispatch
+    };
+};
+export default connect(
+    mapStateToProps,
+    {}
+)(Login);

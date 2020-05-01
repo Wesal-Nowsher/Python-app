@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from "react-redux";
 
 class WeeklyBuild extends Component {
     render() {
@@ -104,4 +105,19 @@ class WeeklyBuild extends Component {
         )
     }
 }
-export default WeeklyBuild;
+const mapStateToProps = ({WeeklyBuild }) => {
+    return {
+
+        batch:WeeklyBuild.batch
+    };
+};
+
+const mapDispachToProps = dispatch => {
+    return {
+        dispatch: dispatch
+    };
+};
+export default connect(
+    mapStateToProps,
+    {}
+)(WeeklyBuild);

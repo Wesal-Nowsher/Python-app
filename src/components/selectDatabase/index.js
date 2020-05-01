@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from "react-redux";
 
 class SelectData extends Component {
     render() {
@@ -35,4 +36,19 @@ class SelectData extends Component {
         )
     }
 }
-export default SelectData;
+const mapStateToProps = ({SelectDatabase }) => {
+    return {
+
+        batch:SelectDatabase.batch
+    };
+};
+
+const mapDispachToProps = dispatch => {
+    return {
+        dispatch: dispatch
+    };
+};
+export default connect(
+    mapStateToProps,
+    {}
+)(SelectData);

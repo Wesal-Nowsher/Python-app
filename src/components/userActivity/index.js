@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from "react-redux";
 
 class UserActivity extends Component {
     render() {
@@ -86,4 +87,19 @@ class UserActivity extends Component {
         )
     }
 }
-export default UserActivity;
+const mapStateToProps = ({UserActivity }) => {
+    return {
+
+        batch:UserActivity.batch
+    };
+};
+
+const mapDispachToProps = dispatch => {
+    return {
+        dispatch: dispatch
+    };
+};
+export default connect(
+    mapStateToProps,
+    {}
+)(UserActivity);

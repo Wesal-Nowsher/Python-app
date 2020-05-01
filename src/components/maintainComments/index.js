@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { connect } from "react-redux";
 
 class MaintainComments extends Component {
     render(){
@@ -33,5 +34,19 @@ class MaintainComments extends Component {
             </div>
         )
     }
-}
-export default MaintainComments;
+}const mapStateToProps = ({MaintainComments }) => {
+    return {
+
+        batch:MaintainComments.batch
+    };
+};
+
+const mapDispachToProps = dispatch => {
+    return {
+        dispatch: dispatch
+    };
+};
+export default connect(
+    mapStateToProps,
+    {}
+)(MaintainComments);

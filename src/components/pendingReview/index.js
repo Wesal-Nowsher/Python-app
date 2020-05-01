@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from "react-redux";
 
 class PendingReview extends Component {
     render() {
@@ -152,4 +153,19 @@ class PendingReview extends Component {
         )
     }
 }
-export default PendingReview;
+const mapStateToProps = ({PendingReview }) => {
+    return {
+
+        batch:PendingReview.batch
+    };
+};
+
+const mapDispachToProps = dispatch => {
+    return {
+        dispatch: dispatch
+    };
+};
+export default connect(
+    mapStateToProps,
+    {}
+)(PendingReview);

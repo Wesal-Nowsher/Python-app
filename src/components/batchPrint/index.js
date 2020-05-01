@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { connect } from "react-redux";
+
 
 class BatchPrint extends Component {
     render(){
@@ -31,4 +33,19 @@ class BatchPrint extends Component {
         )
     }
 }
-export default BatchPrint;
+const mapStateToProps = ({BatchPrint }) => {
+    return {
+
+        batch:BatchPrint.batch
+    };
+};
+
+const mapDispachToProps = dispatch => {
+    return {
+        dispatch: dispatch
+    };
+};
+export default connect(
+    mapStateToProps,
+    {}
+)(BatchPrint);

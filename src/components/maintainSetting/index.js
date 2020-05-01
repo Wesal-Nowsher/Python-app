@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { connect } from "react-redux";
 
 class MaintainSetting extends Component {
     render(){
@@ -38,4 +39,19 @@ class MaintainSetting extends Component {
         )
     }
 }
-export default MaintainSetting;
+const mapStateToProps = ({MaintainSetting }) => {
+    return {
+
+        batch:MaintainSetting.batch
+    };
+};
+
+const mapDispachToProps = dispatch => {
+    return {
+        dispatch: dispatch
+    };
+};
+export default connect(
+    mapStateToProps,
+    {}
+)(MaintainSetting);

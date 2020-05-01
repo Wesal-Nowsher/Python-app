@@ -4,7 +4,8 @@ import 'react-tabs/style/react-tabs.css';
 import { Line, Polar } from 'react-chartjs-2';
 import { Card, CardBody, CardHeader } from 'reactstrap';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
-import MenuComponent from './menuComponent';
+import { connect } from "react-redux";
+
 const line = {
     labels: [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000],
     datasets: [
@@ -86,34 +87,29 @@ const options = {
 }
 
 class Menu extends Component {
-    state={
-        tabheaddata:[{name:"wesal header",id:"1"},{name:"esal header",id:"2"},{name:"sal header",id:"3"}],
-        tabbodydata:[{name:"wesal body",id:"1"},{name:"esal body",id:"2"},{name:"sal body",id:"3"}],
-
-    };
+   
     clossTab=(index)=>{
         console.log("warka dang");
-        let {tabheaddata}=this.state;
-        let tabhead= tabheaddata;
-        tabhead.splice(index, 1);
-        this.setState({tabheaddata:tabhead});
+        // let {tabheaddata}=this.state;
+        // let tabhead= tabheaddata;
+        // tabhead.splice(index, 1);
+        // this.setState({tabheaddata:tabhead});
 
-        let {tabbodydata}=this.state;
-        let tabbody= tabbodydata;
-        tabbody.splice(index, 1);
-        this.setState({tabbodydata:tabbody});
+        // let {tabbodydata}=this.state;
+        // let tabbody= tabbodydata;
+        // tabbody.splice(index, 1);
+        // this.setState({tabbodydata:tabbody});
 
     };
     render() {
         return (
-            
                     <div className="col-sm-10" id="menu">
                         <Tabs defaultIndex={0}>
                             <TabList>
                                 {
-                                    this.state.tabheaddata && this.state.tabheaddata.map((item, index)=>{
+                                    this.props.tabheaddata && this.props.tabheaddata.map((item, index)=>{
                                         return(
-                                            <Tab key={index}><div className="nav-display"><h1>{item.name}</h1><i className="fa fa-times" onClick={()=>{this.clossTab(item.name)}} /></div></Tab>
+                                            <Tab key={index}><div className="nav-display"><h1>{item.name}</h1><i className="fa fa-times" onClick={()=>{this.clossTab(index)}} /></div></Tab>
                                         )
                                 })
                                 }
@@ -128,10 +124,10 @@ class Menu extends Component {
                             {/*<MenuComponent/>   */}
                             {/*</TabPanel>*/}
                             {
-                                this.state.tabbodydata && this.state.tabbodydata.map((item, index)=> {
+                                this.props.tabbodydata && this.props.tabbodydata.map((item, index)=> {
                                     return (
                                         <TabPanel key={index}>
-                                            {item.name}
+                                            {item.component}
                                         </TabPanel>
                                     )
                                 }
@@ -150,5 +146,26 @@ class Menu extends Component {
          
         )
     }
-}
-export default Menu;
+} 
+
+const mapStateToProps = ({sidebar, openweekly, menu }) => {
+    return {
+
+        wesal:sidebar.wesal,
+        ali:openweekly.ali,
+        tabheaddata:menu.tabheaddata,
+        tabbodydata:menu.tabbodydata
+    };
+};
+
+const mapDispachToProps = dispatch => {
+    return {
+        dispatch: dispatch
+    };
+};
+export default connect(
+    mapStateToProps,
+    {}
+)(Menu);
+
+

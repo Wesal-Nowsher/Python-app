@@ -1,4 +1,3 @@
-import ACTIONS from "./actionTypes";
 
 const initialState = {
  
