@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from "react-redux";
-
+import {withRouter} from 'react-router-dom';
 class Login extends Component {
     render(){
         return(
@@ -70,4 +70,4 @@ const mapDispachToProps = dispatch => {
 export default connect(
     mapStateToProps,
     {}
-)(Login);
+)(withRouter(Login));

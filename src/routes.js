@@ -34,8 +34,9 @@ class Routes extends Component {
             <BrowserRouter>
         <Switch>  
         {/* <Route exact path="/login" component={Layout}  /> */}
-        <Route path="/" component={Login}  />
-        <Route path="/selectdatabase" component={SelectDatabase}  />
+        <Route  path="/login" exact component={Login}  />
+        <Route exact path="/" component={Menu}  />
+        <Route exact path="/selectdatabase" component={SelectDatabase}  />
         <Route path="/createuser" component={CreateUser}  />
         <Route path="/employeeaccess" component={EmployeeAccess}  />
         <Route path="/useractivity" component={UserActivity}  />
@@ -59,7 +60,7 @@ class Routes extends Component {
         <Route path="/timeregistrationformtwo" component={TimeRegistrationFormTwo}  />
         <Route path="/builddetailsform" component={BuildDetailsForm}  />
         </Switch>
-        </BrowserRouter>
+    </BrowserRouter>
         )
     }
 }

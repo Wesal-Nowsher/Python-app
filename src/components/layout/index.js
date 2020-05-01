@@ -21,10 +21,10 @@ class Layout extends Component {
                     <div className="col-sm-12 pl-0 pr-0">
                         <div className="topbar">
                             {/* <i className="fa fa-search" onClick={() => { this.open1() }}></i> */}
-                            <button role="button" class="sidenav-toggle---23_Hl" aria-expanded="false" onClick={() => { this.open1() }}>
-                                <span class="icon-bar---2jamJ"></span>
-                                <span class="icon-bar---2jamJ"></span>
-                                <span class="icon-bar---2jamJ"></span>
+                            <button role="button" className="sidenav-toggle---23_Hl" aria-expanded="false" onClick={() => { this.open1() }}>
+                                <span className="icon-bar---2jamJ"></span>
+                                <span className="icon-bar---2jamJ"></span>
+                                <span className="icon-bar---2jamJ"></span>
                             </button>
                             {/* <button onClick={()=>{this.open1()}}>File </button> */}
                             <DropdownButton id="dropdown-item-button" title="File">
