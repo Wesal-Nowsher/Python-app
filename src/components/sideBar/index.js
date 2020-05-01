@@ -9,6 +9,7 @@ class SideBar extends Component {
         return (
             <div className="col-sm-2 pl-0 " >
                 <div className="sidenav">
+                    <Link to="/menu">Menu</Link>
                     <Link to="/login">{this.props.login}</Link>
                     <Link to="/selectDatabase">{this.props.selectdatabase}</Link>
                     <Link to="/createuser">{this.props.createuser}</Link>

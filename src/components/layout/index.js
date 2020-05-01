@@ -4,7 +4,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
 import SideBar from "../sideBar";
 import Menu from "../menu";
-
+import Routes from '../../routes' 
 
 class Layout extends Component {
     state = {
@@ -44,7 +44,8 @@ class Layout extends Component {
                     {
                         this.state.openstate ? <SideBar/> : null
                     }
-                    <Menu />
+                   {this.props.children}  
+                    {/* <Menu /> */}
                 </div>
             </div>
         )

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Login from '../login';
+import Menucomp from '../menu/menuComponent';
 import SelectDatabase from "../selectDatabase";
 import CreateUser from "../createUser";
 import EmployeeAccess from "../employeeAccess";
@@ -26,6 +27,7 @@ import BuildDetailsForm from "../buildDetailsForm";
 
 const initialState = {
     tabheaddata:[
+        {name: "Menu",id:"0"},
         {name: "Login",id:"1"},
     {name: "Select Database",id:"2"},
     {name: "Create User",id:"3"},
@@ -51,7 +53,9 @@ const initialState = {
     {name: "Time Registration Form t",id:"23"},
     {name: "Build Details Form",id:"24"}
     ],
-    tabbodydata:[{name: "Login", component: <Login/>,id:"1"},
+    tabbodydata:[
+        {name: "Menu", component: <Menucomp/>,id:"0"},
+        {name: "Login", component: <Login/>,id:"1"},
     {name: "Select Database", component: <SelectDatabase/>,id:"2"},
     {name: "Create User", component: <CreateUser/>,id:"3"},
     {name: "Employee Access", component: <EmployeeAccess/>,id:"4"},

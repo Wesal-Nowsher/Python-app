@@ -27,12 +27,14 @@ import TimeRegistrationFormTwo from "./components/timeRegistrationFormTwo";
 import BuildDetailsForm from "./components/buildDetailsForm";
 import Layout from "./components/layout";
 
+import { BrowserRouter } from "react-router-dom";
 class Routes extends Component {
     render(){
         return(
+            <BrowserRouter>
         <Switch>  
-        <Route exact path="/" component={Layout}  />
-        <Route path="/login" component={Login}  />
+        {/* <Route exact path="/login" component={Layout}  /> */}
+        <Route path="/" component={Login}  />
         <Route path="/selectdatabase" component={SelectDatabase}  />
         <Route path="/createuser" component={CreateUser}  />
         <Route path="/employeeaccess" component={EmployeeAccess}  />
@@ -57,6 +59,7 @@ class Routes extends Component {
         <Route path="/timeregistrationformtwo" component={TimeRegistrationFormTwo}  />
         <Route path="/builddetailsform" component={BuildDetailsForm}  />
         </Switch>
+        </BrowserRouter>
         )
     }
 }
