@@ -10,8 +10,8 @@ class SideBar extends Component {
             <div className="col-sm-2 pl-0 " >
                 <div className="sidenav">
                     <Link to="/menu">Menu</Link>
-                    <Link to="/login">{this.props.login}</Link>
-                    <Link to="/selectDatabase">{this.props.selectdatabase}</Link>
+                    <div onClick={()=>{this.props.history.push("/login")}}>login</div>
+                    <div onClick={()=>{this.props.history.push("/selectdatabase")}}>{this.props.selectdatabase}</div>
                     <Link to="/createuser">{this.props.createuser}</Link>
                     <Link to="/employeeaccess">{this.props.employeeaccess}</Link>
                     <Link to="/useractivity">{this.props.useractivity}</Link>

@@ -42,10 +42,10 @@ class App extends Component {
                     <BrowserRouter>
 
                         <Layout>
-                            <div className="col-sm-10" id="menu">
+
                         <Switch>
 
-                        <Route  path="/" exact component={Tabs}  />
+                        {/*<Route  path="/" exact component={Tabs}  />*/}
                         <Route  path="/login" exact component={Login}  />
                         <Route  path="/menu" component={Menu} exact />
                         <Route  path="/selectdatabase" component={SelectDatabase}  />
@@ -72,7 +72,7 @@ class App extends Component {
                         <Route path="/timeregistrationformtwo" component={TimeRegistrationFormTwo}  />
                         <Route path="/builddetailsform" component={BuildDetailsForm}  />
                     </Switch>
-                            </div>
+
                         </Layout>
                     </BrowserRouter>
 

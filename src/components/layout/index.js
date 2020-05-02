@@ -4,7 +4,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
 import SideBar from "../sideBar";
 import Menu from "../menu";
-
+import Tabs from "../tabs"
 import {withRouter} from 'react-router-dom';
 class Layout extends Component {
     state = {
@@ -44,9 +44,10 @@ class Layout extends Component {
                     {
                         this.state.openstate ? <SideBar/> : null
                     }
-
+                    <div className="col-sm-10" id="menu">
+                    <Tabs/>
                    {this.props.children}  
-
+                    </div>
                 </div>
             </div>
         )

@@ -26,10 +26,12 @@ import ExcelFileReducer from "../components/excelFile/reducer";
 import TimeRegistrationFormReducer from "../components/timeRegistrationForm/reducer";
 import TimeRegistrationFormTwoReducer from "../components/timeRegistrationFormTwo/reducer";
 import BuildDetailsFormReducer from "../components/buildDetailsForm/reducer";
+import tabsReducer from "../components/tabs/reducer";
 
 const rootReducer = combineReducers({
 	main: globalReducer,
 	sidebar: sideBarReducer,
+	tabs: tabsReducer,
 	openweekly:openweeklybuildReducer,
 	menu:menuReducer,
 	login:LoginReducer,
