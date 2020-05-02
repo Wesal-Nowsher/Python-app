@@ -9,31 +9,31 @@ class SideBar extends Component {
         return (
             <div className="col-sm-2 pl-0 " >
                 <div className="sidenav">
-                    <Link to="/menu">Menu</Link>
+                    <div onClick={()=>{this.props.history.push("/menu")}}>Menu</div>
                     <div onClick={()=>{this.props.history.push("/login")}}>login</div>
                     <div onClick={()=>{this.props.history.push("/selectdatabase")}}>{this.props.selectdatabase}</div>
-                    <Link to="/createuser">{this.props.createuser}</Link>
-                    <Link to="/employeeaccess">{this.props.employeeaccess}</Link>
-                    <Link to="/useractivity">{this.props.useractivity}</Link>
-                    <Link to="/currentopenview">{this.props.currentopenview}</Link>
-                    <Link to="/maintaincomments">{this.props.maintaincomments}</Link>
-                    <Link to="/maintainactivity">{this.props.maintainactivity}</Link>
-                    <Link to="/batchprint">{this.props.batchprint}</Link>
-                    <Link to="/individualprint">{this.props.individualprint}</Link>
-                    <Link to="/maintainsetting">{this.props.maintainsetting}</Link>
-                    <Link to="/weeklybuild">{this.props.weeklybuild}</Link>
-                    <Link to="/openweeklybuild">{this.props.openweekly}</Link>
-                    <Link to="/pendingreview">{this.props.pendingreview}</Link>
-                    <Link to="/builddetailsview">{this.props.builddetailsview}</Link>
-                    <Link to="/emailprint">{this.props.emailprint}</Link>
-                    <Link to="/reviewform">{this.props.reviewform}</Link>
-                    <Link to="/timeregistration">{this.props.timeregistration}</Link>
-                    <Link to="/managepatch">{this.props.managepatch}</Link>
-                    <Link to="/recentapplication">{this.props.recentapplication}</Link>
-                    <Link to="/excelfile">{this.props.excelfile}</Link>
-                    <Link to="/timeregistrationform">{this.props.timeregistrationform}</Link>
-                    <Link to="/timeregistrationformtwo">{this.props.timeregistrationformtwo}</Link>
-                    <Link to="/builddetailsform">{this.props.builddetailsform}</Link>
+                     <div onClick={()=>{this.props.history.push("/createuser")}}>{this.props.createuser}</div>
+                    <div  onClick={()=>{this.props.history.push("/employeeaccess")}}>{this.props.employeeaccess}</div>
+                    <div onClick={()=>{this.props.history.push("/useractivity")}}>{this.props.useractivity}</div>
+                    <div onClick={()=>{this.props.history.push("/currentopenview")}}>{this.props.currentopenview}</div>
+                    <div onClick={()=>{this.props.history.push("/maintaincomments")}}>{this.props.maintaincomments}</div>
+                    <div onClick={()=>{this.props.history.push("/maintainactivity")}}>{this.props.maintainactivity}</div>
+                    <div onClick={()=>{this.props.history.push("/batchprint")}}>{this.props.batchprint}</div>
+                    <div onClick={()=>{this.props.history.push("/individualprint")}}>{this.props.individualprint}</div>
+                    <div onClick={()=>{this.props.history.push("/maintainsetting")}}>{this.props.maintainsetting}</div>
+                    <div onClick={()=>{this.props.history.push("/weeklybuild")}} >{this.props.weeklybuild}</div>
+                    <div onClick={()=>{this.props.history.push("/openweeklybuild")}} >{this.props.openweekly}</div>
+                    <div onClick={()=>{this.props.history.push("/pendingreview")}} >{this.props.pendingreview}</div>
+                    <div onClick={()=>{this.props.history.push("/builddetailsview")}} >{this.props.builddetailsview}</div>
+                    <div onClick={()=>{this.props.history.push("/emailprint")}} >{this.props.emailprint}</div>
+                    <div onClick={()=>{this.props.history.push("/reviewform")}}>{this.props.reviewform}</div>
+                    <div onClick={()=>{this.props.history.push("/timeregistration")}} >{this.props.timeregistration}</div>
+                    <div onClick={()=>{this.props.history.push("/managepatch")}}>{this.props.managepatch}</div>
+                    <div onClick={()=>{this.props.history.push("/recentapplication")}}>{this.props.recentapplication}</div>
+                    <div onClick={()=>{this.props.history.push("/excelfile")}} >{this.props.excelfile}</div>
+                    <div onClick={()=>{this.props.history.push("/timeregistrationform")}} >{this.props.timeregistrationform}</div>
+                    <div onClick={()=>{this.props.history.push("/timeregistrationformtwo")}} >{this.props.timeregistrationformtwo}</div>
+                    <div onClick={()=>{this.props.history.push("/builddetailsform")}} >{this.props.builddetailsform}</div>
                 </div>
             </div>
         )
