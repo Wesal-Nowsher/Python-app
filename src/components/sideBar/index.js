@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import {withRouter, Link } from 'react-router-dom';
 import { connect } from "react-redux";
 class SideBar extends Component {
 
@@ -73,7 +73,7 @@ const mapStateToProps = ({openweekly,
         selectdatabase:SelectDatabase.selectdatabase,
         createuser:CreateUser.createuser,
         employeeaccess:EmployeeAccess.employeeaccess,
-        userctivity:UserActivity.useractivity,
+        useractivity:UserActivity.useractivity,
         currentopenview:CurrentOpenView.currentopenview,
         maintaincomments:MaintainComments.maintaincomments,
         maintainactivity:MaintainActivity.maintainactivity,
@@ -105,5 +105,5 @@ const mapDispachToProps = dispatch => {
 export default connect(
     mapStateToProps,
     {}
-)(SideBar);
+)(withRouter(SideBar));
 

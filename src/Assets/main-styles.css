@@ -181,6 +181,9 @@
     justify-content: space-between;
     align-items: center;
 }
+#employee .form-set label{
+    font-size: 14px
+}
 #employee select{
     width: 100%;
     border: 2px solid rgba(0,0,0,.125);
@@ -194,12 +197,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 150px;
+    width: 155px;
     padding: 10px 10px;
-    margin: 25px 35px 30px 0;
+    margin: 25px 25px 30px 0;
 }
 #employee .employeebox h4{
-    font-size: 18px;
+    font-size: 15px;
     margin-bottom: 0;
     text-align: center;
 }
@@ -212,6 +215,7 @@
 .table-head .lab-inp{
     display: flex;
     align-items: center;
+        font-size: 12px;
 }
 .table-head .lab-inp input{
     margin-left: 14px;
@@ -225,6 +229,7 @@ table{
 }
 .table-body tr td, table thead th{
     padding: 20px 0;
+    font-size: 14px;
 }
 .table-body tr td{
     color: rgb(141,141, 141);
@@ -241,7 +246,7 @@ table{
     width: 68%;
 }
 .pop .card .maintain>div p{
-    font-size: 16px;
+    font-size: 15px;
 }
 .pop .card .maintain-button{
     display: flex;
@@ -285,6 +290,7 @@ table{
     border-color: rgb(216,216,216);
     border-radius: 0;
     padding: 16px 26px 16px 26px;
+    color: black;
 }
 #openweek .react-tabs__tab-list {
     margin: 0 0 0;
@@ -292,6 +298,7 @@ table{
 }
 #openweek .react-tabs__tab--selected {
     background: rgb(216,216,216);
+    color: #ffffff;
 }
 #openweek .react-tabs__tab h1{
     font-size: 16px;
@@ -306,7 +313,7 @@ table{
     align-items: center;
     color: #ffffff;
     padding: 4px 10px;
-    width: 65%;
+    width: 84%;
     justify-content: space-between;
 }
 .sku-ex p{
@@ -366,6 +373,7 @@ table{
 .backgroundcol .first{
     display: flex;
     align-items: center;
+    font-size: 13px;
 }
 .backgroundcol .first p{
     margin-bottom: 0;
@@ -382,6 +390,7 @@ table{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 13px;
 }
 .backgroundcol .second{
     margin: 50px 0 15px;
@@ -396,6 +405,7 @@ table{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 13px;
 }
 .backgroundcol .third .col-sm-6 .unit{
     width: 15%;
@@ -416,7 +426,7 @@ table{
     background: rgb(236,236,236);
 }
 #registration .table-body tr td,#registration table thead th {
-    padding: 20px 30px;
+    padding: 24px 24px;
 }
 #registration table tr:nth-child(even){
     background-color: #f2f2f2;
@@ -468,10 +478,10 @@ table{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 92px;
+    height: 80px;
 }
 .left-content .esd{
-    font-size: 22px;
+    font-size: 18px;
 }
 .lab-inp input, .lab-inp select{
     border: 1px solid rgb(216,216,216);
@@ -552,6 +562,7 @@ table{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 13px;
 }
 .backgroundcol .third .col-sm-9 .unit{
     width: 15%;
@@ -654,6 +665,10 @@ select {
     width: 10px;
     z-index: 0;
 }
+.position-relative.pend-extra img{
+    top:7px;
+    right: 0;
+}
 .position-relative-search i{
     position: absolute;
     top: 8px;
@@ -665,7 +680,7 @@ select {
   transform: scaleX(-1);
 }
 .position-relative.extra img{
-    right: 145px;
+    right: 90px;
 }
 
 /* sidebar css */

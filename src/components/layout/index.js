@@ -8,7 +8,7 @@ import Routes from '../../routes'
 
 class Layout extends Component {
     state = {
-        openstate: false,
+        openstate: true,
     }
     open1 = () => {
         this.setState({ openstate: !this.state.openstate });

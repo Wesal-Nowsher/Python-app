@@ -32,7 +32,7 @@ class TimeRegistrationForm extends Component {
                         <div className="col-sm-3">
                             <div className="lab-inp">
                                 <label className="mb-0">Emp ID</label>
-                                <div className="position-relative">
+                                <div className="position-relative pend-extra">
                                     <select className="w-100 ml-2">
                                         <option>Production</option>
                                         <option>Test1</option>
