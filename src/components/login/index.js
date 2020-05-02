@@ -67,13 +67,13 @@ const mapDispachToProps = dispatch => {
         dispatch: dispatch
     };
 };
-export default withRouter(connect(
-    mapStateToProps,
-    {}
-)(Login));
-
-
-// export default connect(
+// export default withRouter(connect(
 //     mapStateToProps,
 //     {}
-// )(withRouter(Login));
+// )(Login));
+
+
+export default connect(
+    mapStateToProps,
+    {}
+)(Login);

@@ -1,9 +1,9 @@
 import React, { Fragment, Component } from 'react';
-import Routes from "./routes";
+
 import { connect } from "react-redux";
-import  Layout from './components/layout'
-import {withRouter} from "react-router"
-import { Route, Switch} from "react-router-dom";
+// import  Layout from './components/layout'
+import {withRouter} from "react-router-dom"
+
 import Login from './components/login';
 import Menu from "./components/menu";
 import SelectDatabase from "./components/selectDatabase";
@@ -29,19 +29,25 @@ import ExcelFile from "./components/excelFile";
 import TimeRegistrationForm from "./components/timeRegistrationForm";
 import TimeRegistrationFormTwo from "./components/timeRegistrationFormTwo";
 import BuildDetailsForm from "./components/buildDetailsForm";
-// import Layout from "./components/layout";
-
+import  Layout from './components/layout'
+import { NavLink } from 'react-router-dom'
+import { Route, Switch, Link } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 class App extends Component {
     render(){
         return(
             <div>
-                <Layout>
-                <div className="col-sm-10" id="menu">
-                    <Switch>
 
+
+                    <BrowserRouter>
+
+                        <Layout>
+                            <div className="col-sm-10" id="menu">
+                        <Switch>
+
+                        {/*<Route  path="/layout" exact component={}  />*/}
                         <Route  path="/login" exact component={Login}  />
-                        <Route  path="/" component={Menu}  />
+                        <Route  path="/" component={Menu} exact />
                         <Route  path="/selectdatabase" component={SelectDatabase}  />
                         <Route path="/createuser" component={CreateUser}  />
                         <Route path="/employeeaccess" component={EmployeeAccess}  />
@@ -66,10 +72,12 @@ class App extends Component {
                         <Route path="/timeregistrationformtwo" component={TimeRegistrationFormTwo}  />
                         <Route path="/builddetailsform" component={BuildDetailsForm}  />
                     </Switch>
-                </div>
+                            </div>
+                        </Layout>
+                    </BrowserRouter>
+
                     
-                    </Layout>  
-                {/* <Routes/> */}
+
             </div>
         )
     }

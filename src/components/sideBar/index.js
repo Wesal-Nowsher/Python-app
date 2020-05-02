@@ -6,7 +6,7 @@ class SideBar extends Component {
 
 
     render() {
-              
+
         return (
             <div className="col-sm-2 pl-0 " >
                 <div className="sidenav">
