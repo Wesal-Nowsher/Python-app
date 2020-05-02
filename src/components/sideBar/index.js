@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {withRouter, Link } from 'react-router-dom';
+import {Link } from 'react-router-dom';
+import {withRouter} from 'react-router';
 import { connect } from "react-redux";
 class SideBar extends Component {
 
@@ -102,8 +103,12 @@ const mapDispachToProps = dispatch => {
         dispatch: dispatch
     };
 };
-export default connect(
+export default withRouter(connect(
     mapStateToProps,
     {}
-)(withRouter(SideBar));
-
+)(SideBar));
+// export default connect(
+//     mapStateToProps,
+//     {}
+// )(withRouter());
+//

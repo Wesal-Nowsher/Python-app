@@ -4,8 +4,8 @@ import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
 import SideBar from "../sideBar";
 import Menu from "../menu";
-import Routes from '../../routes' 
-
+import Routes from '../../routes'
+import {withRouter} from 'react-router';
 class Layout extends Component {
     state = {
         openstate: true,
@@ -63,7 +63,7 @@ const mapDispachToProps = dispatch => {
         dispatch: dispatch
     };
 };
-export default connect(
+export default withRouter(connect(
     mapStateToProps,
     {}
-)(Layout);
+)(Layout));

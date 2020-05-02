@@ -5,7 +5,7 @@ import { Line, Polar } from 'react-chartjs-2';
 import { Card, CardBody, CardHeader } from 'reactstrap';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 import { connect } from "react-redux";
-
+import { Link } from 'react-router-dom'
 const line = {
     labels: [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000],
     datasets: [
@@ -106,6 +106,7 @@ class Menu extends Component {
                     <div className="col-sm-10" id="menu">
                         <Tabs defaultIndex={0}>
                             <TabList>
+                                <Link to="/Login">Login</Link>
                                 {
                                     this.props.tabheaddata && this.props.tabheaddata.map((item, index)=>{
                                         return(

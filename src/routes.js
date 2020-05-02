@@ -31,36 +31,9 @@ import { BrowserRouter } from "react-router-dom";
 class Routes extends Component {
     render(){
         return(
-            <BrowserRouter>
-        <Switch>  
-        {/* <Route exact path="/login" component={Layout}  /> */}
-        <Route  path="/login" exact component={Login}  />
-        <Route exact path="/" component={Menu}  />
-        <Route exact path="/selectdatabase" component={SelectDatabase}  />
-        <Route path="/createuser" component={CreateUser}  />
-        <Route path="/employeeaccess" component={EmployeeAccess}  />
-        <Route path="/useractivity" component={UserActivity}  />
-        <Route path="/currentopenview" component={CurrentOpenView}  />
-        <Route path="/maintaincomments" component={MaintainComments}  />
-        <Route path="/maintainactivity" component={MaintainActivity}  />
-        <Route path="/maintainsetting" component={MaintainSetting}  />
-        <Route path="/weeklybuild" component={WeeklyBuild}  />
-        <Route path="/openweeklybuild" component={OpenWeeklyBuild}  />
-        <Route path="/pendingreview" component={PendingReview}  />
-        <Route path="/builddetailsview" component={BuildDetailsView}  />
-        <Route path="/batchprint" component={BatchPrint}  />
-        <Route path="/individualprint" component={IndividualPrint}  />
-        <Route path="/emailprint" component={EmailPrint}  />
-        <Route path="/reviewform" component={ReviewForm}  />
-        <Route path="/timeregistration" component={TimeRegistration}  />
-        <Route path="/managepatch" component={ManagePatch}  />
-        <Route path="/recentapplication" component={RecentApplication}  />
-        <Route path="/excelfile" component={ExcelFile}  />
-        <Route path="/timeregistrationform" component={TimeRegistrationForm}  />
-        <Route path="/timeregistrationformtwo" component={TimeRegistrationFormTwo}  />
-        <Route path="/builddetailsform" component={BuildDetailsForm}  />
-        </Switch>
-    </BrowserRouter>
+<div>
+
+</div>
         )
     }
 }
