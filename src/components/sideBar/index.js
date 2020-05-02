@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import {Link } from 'react-router-dom';
-import {withRouter} from 'react-router';
+import {withRouter, Link } from 'react-router-dom';
 import { connect } from "react-redux";
 class SideBar extends Component {
 
@@ -10,7 +9,7 @@ class SideBar extends Component {
         return (
             <div className="col-sm-2 pl-0 " >
                 <div className="sidenav">
-                    <Link to="/">Menu</Link>
+                    <Link to="/menu">Menu</Link>
                     <Link to="/login">{this.props.login}</Link>
                     <Link to="/selectDatabase">{this.props.selectdatabase}</Link>
                     <Link to="/createuser">{this.props.createuser}</Link>

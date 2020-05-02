@@ -796,3 +796,46 @@ select {
 .sidenav-toggle---23_Hl .icon-bar---2jamJ + .icon-bar---2jamJ {
     margin-top: 4px;
 }
+
+/* Tabs css */
+#menu .react-tabs__tab {
+    background: rgb(216,216,216);
+    border-color: #ffffff;
+    color: #ffffff;
+    border-radius: 0;
+    padding: 12px 4px 12px 24px;
+    /* width: 15%; */
+}
+/* #menu .tabs-button button --selected {
+    background: #fff;
+    border-color: #aaa;
+    color: black;
+    border-radius: 5px 5px 0 0;
+} */
+#menu .tabs-button{
+    display: flex;
+}
+#menu .tabs-button button {
+    background: rgb(216,216,216);
+    border-color: #ffffff;
+    color: #ffffff;
+    border-radius: 0;
+    padding: 12px 4px 12px 24px;
+    /* width: 15%; */
+}
+#menu .tabs-button button {
+    display:  flex;
+    border: 1px solid transparent;
+    border-bottom: none;
+    bottom: -1px;
+    position: relative;
+    list-style: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    align-items: center;
+}
+#menu .tabs-button button h1{
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-right:14px;
+}

@@ -30,9 +30,9 @@ import TimeRegistrationForm from "./components/timeRegistrationForm";
 import TimeRegistrationFormTwo from "./components/timeRegistrationFormTwo";
 import BuildDetailsForm from "./components/buildDetailsForm";
 import  Layout from './components/layout'
-import { NavLink } from 'react-router-dom'
 import { Route, Switch, Link } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
+import Tabs from "./components/tabs"
 class App extends Component {
     render(){
         return(
@@ -45,9 +45,9 @@ class App extends Component {
                             <div className="col-sm-10" id="menu">
                         <Switch>
 
-                        {/*<Route  path="/layout" exact component={}  />*/}
+                        <Route  path="/" exact component={Tabs}  />
                         <Route  path="/login" exact component={Login}  />
-                        <Route  path="/" component={Menu} exact />
+                        <Route  path="/menu" component={Menu} exact />
                         <Route  path="/selectdatabase" component={SelectDatabase}  />
                         <Route path="/createuser" component={CreateUser}  />
                         <Route path="/employeeaccess" component={EmployeeAccess}  />

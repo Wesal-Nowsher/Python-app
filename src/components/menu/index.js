@@ -103,7 +103,7 @@ class Menu extends Component {
     };
     render() {
         return (
-                    <div className="col-sm-10" id="menu">
+                    <div className="col-sm-12" id="menu">
                         <Tabs defaultIndex={0}>
                             <TabList>
 
