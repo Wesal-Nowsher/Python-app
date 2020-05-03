@@ -33,7 +33,6 @@ import  Layout from './components/layout'
 import { Route, Switch, Link } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import Tabs from "./components/tabs"
-import Error from "./components/error"
 class App extends Component {
     render(){
         return(
@@ -45,7 +44,7 @@ class App extends Component {
                         <Layout>
 
                         <Switch>
-                        <Route  path="/error" component={Error}  />
+
                         {/*<Route  path="/" exact component={Tabs}  />*/}
                         <Route exact  path="/login" exact component={Login}  />
                         <Route  path="/menu" component={Menu} exact />

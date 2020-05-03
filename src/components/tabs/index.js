@@ -13,24 +13,22 @@ const Tabs =(props)=>{
                 Tab.push(item);
             }
         })
-    console.log("Tab s", Tab);
-
     props.closetabs(Tab);
-        console.log("Tab s s", Tab);
         if( props.location.pathname.replace("/","")===name){
             console.log("in if of tabs", name)
             let linkto=Tab.length>0 ? Tab[Tab.length-1].name:"/";
             props.history.push(`${linkto}`)
         }
     }
-    console.log("params", props.location)
+
+
         return (
             <div className="col-sm-12 pl-0 pr-0" id="menu">
                 <div className="tabs-button">
                     {
                         props.tabs && props.tabs.map((item,index)=>{
                             return <button  className={
-                                props.location.pathname.replace("/","")===item.name ? "blue-back":""
+                                props.location.pathname.replace("/","")===item.name  ? "blue-back":""
 
                             }
                                            key={index}><h1
