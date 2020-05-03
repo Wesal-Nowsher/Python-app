@@ -6,6 +6,7 @@ import { Card, CardBody, CardHeader } from 'reactstrap';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 import { connect } from "react-redux";
 import { Link,withRouter } from 'react-router-dom'
+import Menucomp from '../menu/menuComponent';
 const line = {
     labels: [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000],
     datasets: [
@@ -104,45 +105,7 @@ class Menu extends Component {
     render() {
         return (
                     <div className="col-sm-12" id="menu">
-                        <Tabs defaultIndex={0}>
-                            <TabList>
-
-                                {
-                                    this.props.tabheaddata && this.props.tabheaddata.map((item, index)=>{
-                                        return(
-                                            <Tab key={index}><div className="nav-display"><h1>{item.name}</h1><i className="fa fa-times" onClick={()=>{this.clossTab(index)}} /></div></Tab>
-                                        )
-                                })
-                                }
-
-                                {/*<Tab><div className="nav-display"><h1>Reviews</h1><i className="fa fa-times" /></div></Tab>*/}
-                                {/*<Tab><div className="nav-display"><h1>Time Sheets</h1><i className="fa fa-times" /></div></Tab>*/}
-                            </TabList>
-                            {
-
-                            }
-                            {/*<TabPanel>*/}
-                            {/*<MenuComponent/>   */}
-                            {/*</TabPanel>*/}
-                            {
-                                this.props.tabbodydata && this.props.tabbodydata.map((item, index)=> {
-                                    return (
-                                        <TabPanel key={index}>
-                                            {item.component}
-                                        </TabPanel>
-                                    )
-                                }
-                                )
-                            }
-
-
-                            {/*<TabPanel>*/}
-                                {/*Menu 2*/}
-                            {/*</TabPanel>*/}
-                            {/*<TabPanel>*/}
-                                {/*Menu 3*/}
-                            {/*</TabPanel>*/}
-                        </Tabs>
+                        <Menucomp/>
                     </div>
          
         )

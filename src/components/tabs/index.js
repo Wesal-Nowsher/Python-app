@@ -2,38 +2,40 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import {withRouter} from 'react-router-dom';
 import {closetabs} from "./actions"
-class Tabs extends Component {
-    state={
-        tabs:[]
-    }
-    closeTabs=(id)=>{
+const Tabs =(props)=>{
+
+    const closeTabs=(name)=>{
     console.log("wesa;")
-    let {tabs} = this.props;
-    let Tabs=[];
+    let {tabs} = props;
+    let Tab=[];
         tabs.map((item)=>{
-            if(item.id!== id){
-                Tabs.push(item);
+            if(item.name!== name){
+                Tab.push(item);
             }
         })
-    // Tabs.splice(index,1);
-    console.log("Tabs", Tabs)
-    this.props.closetabs(Tabs);
+    console.log("Tab s", Tab);
+
+    props.closetabs(Tab);
+        console.log("Tab s s", Tab);
+        if( props.location.pathname.replace("/","")===name){
+            console.log("in if of tabs", name)
+            let linkto=Tab.length>0 ? Tab[Tab.length-1].name:"/";
+            props.history.push(`${linkto}`)
+        }
     }
-    componentDidMount(){
-
-    }
-
-
-
-    render() {
-        let {tabs}=this.props;
-        console.log("tabs",tabs)
+    console.log("params", props.location)
         return (
-            <div className="col-sm-12" id="menu">
+            <div className="col-sm-12 pl-0 pr-0" id="menu">
                 <div className="tabs-button">
                     {
-                        this.props.tabs && this.props.tabs.map((item,index)=>{
-                            return <button key={index}><h1>{item.name}</h1><i className="fa fa-times" onClick={()=>{this.closeTabs(item.id)}}></i></button>
+                        props.tabs && props.tabs.map((item,index)=>{
+                            return <button  className={
+                                props.location.pathname.replace("/","")===item.name ? "blue-back":""
+
+                            }
+                                           key={index}><h1
+                                onClick={()=>{props.history.push(`/${item.name}`)}}
+                            >{item.name}</h1><i className="fa fa-times" onClick={()=>{closeTabs(item.name)}}></i></button>
                         })
                     }
 
@@ -42,7 +44,7 @@ class Tabs extends Component {
 
         )
     }
-}
+
 
 const mapStateToProps = ({ tabs}) => {
     return {

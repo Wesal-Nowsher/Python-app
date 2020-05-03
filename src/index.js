@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import store from './store/configureStore';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Assets/main-styles.css';
+import './Assets/extrea.css';
 ReactDOM.render(
     <Provider store={store}>
        <BrowserRouter>
