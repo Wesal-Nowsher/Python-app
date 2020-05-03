@@ -2,6 +2,25 @@ import React, {Component} from 'react';
 import { connect } from "react-redux";
 import {withRouter} from 'react-router-dom';
 class Login extends Component {
+    state = {
+        email: "",
+        password: "",
+        Remember:false
+    };
+    login = () => {
+        let {email, password} = this.state;
+        if (email === "") {
+            return ;
+        }
+        if (password === "") {
+            return ;
+        }
+        let user = {
+            email: email,
+            password: password
+        };
+        localStorage.setItem('user', JSON.stringify(user));
+    }
     render(){
         return(
             <div className="container" id="login">
@@ -14,11 +33,11 @@ class Login extends Component {
                                 </div>
                                 <div className="lab-inp">
                                     <label className="mb-0">Username</label>
-                                    <input type="text"/>
+                                    <input type="text"  onChange={event => this.setState({email: event.target.value})} required/>
                                 </div>
                                 <div className="lab-inp">
                                     <label className="mb-0">Password</label>
-                                    <input type="text"/>
+                                    <input type="password" onChange={event => this.setState({password: event.target.value})} required/>
                                 </div>
                                 <div className="text-center">
                                     <a href="#">Forgot your password ?</a>
@@ -29,7 +48,7 @@ class Login extends Component {
                                     <input type="checkbox"/>Remember me
                                 </div>
                                 <div className="right">
-                                    <button>LOGIN</button>
+                                    <button type="button" onClick={() => this.login()}>LOGIN</button>
                                 </div>
                             </div>
                         </div>

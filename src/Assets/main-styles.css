@@ -840,3 +840,48 @@ select {
     margin-bottom: 0;
     margin-right:14px;
 }
+
+/* error page css */
+#error .card-head{
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+}
+#error .card-head .card-left{
+    display: flex;
+    align-items: center;
+}
+#error .card-head .card-left p{
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+#error .card-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#error .card-body i{
+    font-size: 60px;
+}
+#error .card-body p{
+    margin-bottom: 0;
+
+}
+#error .cardbot{
+    display: flex;
+    justify-content: flex-end;
+    padding: 4px 20px 20px;
+}
+#error .cardbot button{
+    width: 25%;
+    background: rgb(216,216,216);
+    border: none;
+    outline: none;
+    padding: 4px 0;
+    font-weight: 500;
+}
+#error i.fa-times-circle{
+    color: red;
+}
