@@ -28,12 +28,31 @@ import RecentApplication from "./components/recentApplication";
 import ExcelFile from "./components/excelFile";
 import TimeRegistrationForm from "./components/timeRegistrationForm";
 import TimeRegistrationFormTwo from "./components/timeRegistrationFormTwo";
+import {addTabs} from "./components/tabs/actions";
 import BuildDetailsForm from "./components/buildDetailsForm";
 import  Layout from './components/layout'
 import { Route, Switch, Link } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import Tabs from "./components/tabs"
 class App extends Component {
+    componentDidMount(){
+        let {tabs}=this.props;
+        let Tabs=[];
+        let isThere=true;
+        tabs.map((item)=>{
+            if(item.name ==="menu"){
+                isThere=false
+            }
+        });
+        if(isThere){
+            Tabs.push(...tabs,{id:`${tabs.length+1}`,name:"menu"})
+        }
+        else{
+            Tabs.push(...tabs);
+        }
+        this.props.addTabs(Tabs);
+        this.props.history.push(`/menu`);
+    }
     render(){
         return(
             <div>
@@ -45,7 +64,7 @@ class App extends Component {
 
                         <Switch>
 
-                        {/*<Route  path="/" exact component={Tabs}  />*/}
+                        <Route  path="/" exact component={Menu}  />
                         <Route exact  path="/login" exact component={Login}  />
                         <Route  path="/menu" component={Menu} exact />
                         <Route  path="/selectdatabase" component={SelectDatabase}  />
@@ -82,12 +101,13 @@ class App extends Component {
         )
     }
 }
-const mapStateToProps = ({ }) => {
+const mapStateToProps = ({ tabs}) => {
     return {
+        tabs:tabs.tabs
     };
 };
 
 export default connect(
     mapStateToProps,
-    { }
+    {addTabs }
 )(withRouter(App));

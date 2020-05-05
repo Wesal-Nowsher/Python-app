@@ -29,7 +29,6 @@ const Tabs =(props)=>{
                         props.tabs && props.tabs.map((item,index)=>{
                             return <button  className={
                                 props.location.pathname.replace("/","")===item.name  ? "blue-back":""
-
                             }
                                            key={index}><h1
                                 onClick={()=>{props.history.push(`/${item.name}`)}}
