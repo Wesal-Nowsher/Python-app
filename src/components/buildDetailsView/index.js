@@ -3,7 +3,8 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { connect } from "react-redux";
 
-
+import BuildDetails from './builddetails';
+import BuildDetails2 from './builddetails2';
 class BuildDetailsView extends Component {
     render() {
         return (
@@ -87,49 +88,7 @@ class BuildDetailsView extends Component {
                                     <div className="row tab-row">
                                         <div className="col-sm-12">
                                             <div className="table-body weekly">
-                                                <table>
-                                                    <thead>
-                                                        <th>Week Build #</th>
-                                                        <th>From</th>
-                                                        <th>To</th>
-                                                        <th>Build SKU#</th>
-                                                        <th>SKU</th>
-                                                        <th>Qty Planned</th>
-                                                        <th>QTY Objective</th>
-                                                        <th>QTYBuilt</th>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>25266</td>
-                                                            <td>10/31/2019</td>
-                                                            <td>10/31/2019</td>
-                                                            <td>12345</td>
-                                                            <td>CYW550505</td>
-                                                            <td>77</td>
-                                                            <td>77</td>
-                                                            <td>77</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>25266</td>
-                                                            <td>10/31/2019</td>
-                                                            <td>10/31/2019</td>
-                                                            <td>12345</td>
-                                                            <td>CYW550505</td>
-                                                            <td>77</td>
-                                                            <td>77</td>
-                                                            <td>77</td>
-                                                        </tr><tr>
-                                                            <td>25266</td>
-                                                            <td>10/31/2019</td>
-                                                            <td>10/31/2019</td>
-                                                            <td>12345</td>
-                                                            <td>CYW550505</td>
-                                                            <td>77</td>
-                                                            <td>77</td>
-                                                            <td>77</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                                                <BuildDetails/>
                                             </div>
                                         </div>
                                     </div>
@@ -138,54 +97,7 @@ class BuildDetailsView extends Component {
                                     <div className="row tab-row">
                                         <div className="col-sm-12">
                                             <div className="table-body weekly">
-                                                <table>
-                                                    <thead>
-                                                        <th>Week Build #</th>
-                                                        <th>From</th>
-                                                        <th>To</th>
-                                                        <th>Build SKU#</th>
-                                                        <th>SKU</th>
-                                                        <th>Employee</th>
-                                                        <th>Qty Planned</th>
-                                                        <th>QTY Objective</th>
-                                                        <th>QTYBuilt</th>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>25266</td>
-                                                            <td>10/31/2019</td>
-                                                            <td>10/31/2019</td>
-                                                            <td>12345</td>
-                                                            <td>CYW550505</td>
-                                                            <td>Richard</td>
-                                                            <td>77</td>
-                                                            <td>77</td>
-                                                            <td>77</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>25266</td>
-                                                            <td>10/31/2019</td>
-                                                            <td>10/31/2019</td>
-                                                            <td>12345</td>
-                                                            <td>CYW550505</td>
-                                                            <td>Richard</td>
-                                                            <td>77</td>
-                                                            <td>77</td>
-                                                            <td>77</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>25266</td>
-                                                            <td>10/31/2019</td>
-                                                            <td>10/31/2019</td>
-                                                            <td>12345</td>
-                                                            <td>CYW550505</td>
-                                                            <td>Richard</td>
-                                                            <td>77</td>
-                                                            <td>77</td>
-                                                            <td>77</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                                                <BuildDetails2/>
                                             </div>
                                         </div>
                                     </div>

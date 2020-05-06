@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-
+import Weeklybuilds from './weeklybuild'
 class WeeklyBuild extends Component {
     render() {
         return (
@@ -45,60 +45,7 @@ class WeeklyBuild extends Component {
                         </div>
                     </div>
                     <div className="table-body">
-                        <table>
-                            <thead>
-                                <th>BuildID</th>
-                                <th>From</th>
-                                <th>To</th>
-                                <th>Qty SKUs</th>
-                                <th>Qty Employees</th>
-                                <th>Total Planned</th>
-                                <th>Total Built</th>
-                                <th>Total Hours</th>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>5064</td>
-                                    <td>10/29/2019</td>
-                                    <td>10/29/2019</td>
-                                    <td>7</td>
-                                    <td>7</td>
-                                    <td>90</td>
-                                    <td>85</td>
-                                    <td>195</td>
-                                </tr>
-                                <tr>
-                                    <td>5064</td>
-                                    <td>10/29/2019</td>
-                                    <td>10/29/2019</td>
-                                    <td>8</td>
-                                    <td>8</td>
-                                    <td>90</td>
-                                    <td>85</td>
-                                    <td>195</td>
-                                </tr>
-                                <tr>
-                                    <td>5064</td>
-                                    <td>10/29/2019</td>
-                                    <td>10/29/2019</td>
-                                    <td>7</td>
-                                    <td>7</td>
-                                    <td>90</td>
-                                    <td>85</td>
-                                    <td>195</td>
-                                </tr>
-                                <tr>
-                                    <td>5064</td>
-                                    <td>10/29/2019</td>
-                                    <td>10/29/2019</td>
-                                    <td>7</td>
-                                    <td>7</td>
-                                    <td>90</td>
-                                    <td>85</td>
-                                    <td>195</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <Weeklybuilds/>
                     </div>
                 </div>
             </div>

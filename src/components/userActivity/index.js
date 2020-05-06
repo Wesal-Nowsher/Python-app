@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-
+import UserActivit from './useractivity'
 class UserActivity extends Component {
     render() {
         return (
@@ -45,42 +45,7 @@ class UserActivity extends Component {
                         </div>
                     </div>
                     <div className="table-body">
-                        <table>
-                            <thead>
-                                <th>Date</th>
-                                <th>Time</th>
-                                <th>Location</th>
-                                <th>Employee</th>
-                                <th>Refrence</th>
-                                <th>Activity    </th>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>11/23/2019</td>
-                                    <td>11/25/2019</td>
-                                    <td>7549 Cobblestone St.Batside, Ny 13316</td>
-                                    <td>23</td>
-                                    <td>Tesxt Placeholder</td>
-                                    <td>Activity 1</td>
-                                </tr>
-                                <tr>
-                                    <td>11/23/2019</td>
-                                    <td>11/25/2019</td>
-                                    <td>7549 Cobblestone St.Batside, Ny 13316</td>
-                                    <td>23</td>
-                                    <td>Tesxt Placeholder</td>
-                                    <td>Activity 1</td>
-                                </tr>
-                                <tr>
-                                    <td>11/23/2019</td>
-                                    <td>11/25/2019</td>
-                                    <td>7549 Cobblestone St.Batside, Ny 13316</td>
-                                    <td>23</td>
-                                    <td>Tesxt Placeholder</td>
-                                    <td>Activity 1</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <UserActivit/>
                     </div>
                 </div>
             </div>

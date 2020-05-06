@@ -5,20 +5,23 @@ import {closetabs} from "./actions"
 const Tabs =(props)=>{
 
     const closeTabs=(name)=>{
-    console.log("wesa;")
-    let {tabs} = props;
-    let Tab=[];
+        console.log("wesa",name)
+    if(name!=="menu"){
+
+        let {tabs} = props;
+        let Tab=[];
         tabs.map((item)=>{
             if(item.name!== name){
                 Tab.push(item);
             }
         })
-    props.closetabs(Tab);
-        if( props.location.pathname.replace("/","")===name){
+        props.closetabs(Tab);
+        if( props.location.pathname.replace("/","")===name ){
             console.log("in if of tabs", name)
             let linkto=Tab.length>0 ? Tab[Tab.length-1].name:"/";
             props.history.push(`${linkto}`)
         }
+    }
     }
 
 
